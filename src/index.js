@@ -1,17 +1,20 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <>
+        <h1 id="title">가위바위보</h1>
+        <h2>{getResult()}</h2>
+        <button className="hand" onClick={handleClick}>가위</button>
+        <button className="hand" onClick={handleClick}>바위</button>
+        <button className="hand" onClick={handleClick}>보</button>
+    </>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function getResult(me, other){
+    return "승리";
+}
+
+function handleClick(){
+    console.log("가위바위보!");
+}
