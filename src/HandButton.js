@@ -7,5 +7,4 @@ function HandButton({value, onClick}) {
                 <HandIcon value={value}/>
             </button>)
 }
-
 export default HandButton;
